@@ -37,13 +37,13 @@ public class ConfigHelper {
 	private final ConfigHelper conf;
 	public Map<World, WorldSettings> worlds = new HashMap<>();
 
-	public static Set<PotionEffectType> negativeEffects = Stream.of(BLINDNESS, CONFUSION, HARM, HUNGER, LEVITATION,
-			POISON, SLOW, SLOW_DIGGING, UNLUCK, WEAKNESS, WITHER, UNLUCK).collect(Collectors.toSet());
-	public static Set<PotionEffectType> positiveEffects = Stream.of(ABSORPTION, DAMAGE_RESISTANCE, FAST_DIGGING,
-			FIRE_RESISTANCE, GLOWING, HEAL, HEALTH_BOOST, INCREASE_DAMAGE, INVISIBILITY, JUMP, NIGHT_VISION,
+	public static Set<PotionEffectType> negativeEffects = Stream.of(BLINDNESS, NAUSEA, INSTANT_DAMAGE, HUNGER, LEVITATION,
+			POISON, SLOWNESS, MINING_FATIGUE, UNLUCK, WEAKNESS, WITHER, UNLUCK).collect(Collectors.toSet());
+	public static Set<PotionEffectType> positiveEffects = Stream.of(ABSORPTION, RESISTANCE, HASTE,
+			FIRE_RESISTANCE, GLOWING, INSTANT_HEALTH, HEALTH_BOOST, STRENGTH, INVISIBILITY, JUMP_BOOST, NIGHT_VISION,
 			REGENERATION, SATURATION, SPEED, WATER_BREATHING, LUCK).collect(Collectors.toSet());
-	public static Set<Particle> requiresData = Stream.of(REDSTONE, BLOCK_CRACK, BLOCK_DUST, FALLING_DUST, ITEM_CRACK,
-			SPELL_MOB, SPELL_MOB_AMBIENT).collect(Collectors.toSet());
+	public static Set<Particle> requiresData = Stream.of(DUST, BLOCK, DUST_PILLAR, FALLING_DUST, ITEM,
+			WITCH, BLOCK_MARKER, SHRIEK, SCULK_CHARGE, VIBRATION, DUST_COLOR_TRANSITION, ENTITY_EFFECT).collect(Collectors.toSet());
 	public static boolean firstRun;
 
 	private static String validBarColors, validBarStyles, validParticlePatternTypes;
