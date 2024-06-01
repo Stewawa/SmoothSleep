@@ -250,7 +250,7 @@ public class PlayerData implements Purgeable {
 	public void setSleepTicks(long ticks) {
 		try {
 			Object nmsPlr = ReflectUtil.invokeMethod(plr, "getHandle");
-			ReflectUtil.setValue(nmsPlr, false, "sleepTicks", (int) ticks);
+			ReflectUtil.setValue(nmsPlr, false, "sleepCounter", (int) ticks);
 		} catch (Exception e) { e.printStackTrace(); }
 	}
 }
