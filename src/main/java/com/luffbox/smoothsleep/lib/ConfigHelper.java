@@ -37,13 +37,9 @@ public class ConfigHelper {
 	private final ConfigHelper conf;
 	public Map<World, WorldSettings> worlds = new HashMap<>();
 
-	public static Set<PotionEffectType> negativeEffects = Stream.of(BLINDNESS, NAUSEA, INSTANT_DAMAGE, HUNGER, LEVITATION,
-			POISON, SLOWNESS, MINING_FATIGUE, UNLUCK, WEAKNESS, WITHER, UNLUCK).collect(Collectors.toSet());
-	public static Set<PotionEffectType> positiveEffects = Stream.of(ABSORPTION, RESISTANCE, HASTE,
-			FIRE_RESISTANCE, GLOWING, INSTANT_HEALTH, HEALTH_BOOST, STRENGTH, INVISIBILITY, JUMP_BOOST, NIGHT_VISION,
-			REGENERATION, SATURATION, SPEED, WATER_BREATHING, LUCK).collect(Collectors.toSet());
-	public static Set<Particle> requiresData = Stream.of(DUST, BLOCK, DUST_PILLAR, FALLING_DUST, ITEM,
-			WITCH, BLOCK_MARKER, SHRIEK, SCULK_CHARGE, VIBRATION, DUST_COLOR_TRANSITION, ENTITY_EFFECT).collect(Collectors.toSet());
+	public static Set<PotionEffectType> negativeEffects = new HashSet<>();
+	public static Set<PotionEffectType> positiveEffects = new HashSet<>();
+	public static Set<Particle> requiresData = new HashSet<>();
 	public static boolean firstRun;
 
 	private static String validBarColors, validBarStyles, validParticlePatternTypes;

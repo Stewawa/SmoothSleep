@@ -63,6 +63,12 @@
     </build>
 
     <repositories>
+        <!-- CMI-API Repository - REQUIRED for CMI-API dependency -->
+        <repository>
+            <id>rosewood-repo</id>
+            <url>https://repo.rosewooddev.me/</url>
+        </repository>
+        <!-- Existing repositories -->
         <repository>
             <id>purpur</id>
             <url>https://repo.purpurmc.org/snapshots</url>
@@ -88,6 +94,10 @@
             <id>maven_central</id>
             <name>Maven Central</name>
             <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -117,9 +127,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>CMI-API</groupId>
+            <groupId>com.github.Zrips</groupId>
             <artifactId>CMI-API</artifactId>
-            <version>9.7.0.8</version>
+            <version>9.7.14.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
